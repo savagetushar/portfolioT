@@ -13,10 +13,10 @@ const Projects = () => {
     {
       title: "Food App",
       description:
-        "A modern food delivery application built with React Native featuring real-time ordering, user authentication, and seamless payment integration.",
-      techStack: ["React Native", "JavaScript", "Mobile Development"],
+        "A modern food delivery application built with React  featuring real-time ordering, user authentication, and seamless payment integration.",
+      techStack: ["React", "JavaScript", "web Development"],
       github: "https://github.com/savagetushar/Foodiehub",
-      demo: null,
+      demo: "https://foodiehub-gules.vercel.app/",
       image:
         "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500&h=300&fit=crop",
       gradient: "from-gray-700 to-black",
@@ -27,18 +27,18 @@ const Projects = () => {
         "A comprehensive library management application with book cataloging, member management, and automated fine calculation systems.",
       techStack: ["HTML", "CSS", "JavaScript", "Web Development"],
       github:
-        "https://github.com/Yogesh01010/Library-Management-System-Application.git",
-      demo: "https://library-management-system-application.netlify.app/",
+        "https://github.com/savagetushar/Lms-Frontend",
+      demo: "https://lms-frontend-snowy.vercel.app/",
       image: library,
       gradient: "from-gray-700 to-black",
     },
     {
-      title: "Birthday Website",
+      title: "You Tube clone",
       description:
-        "An interactive and personalized birthday celebration website with animations, photo galleries, and custom messaging features.",
-      techStack: ["React", "TypeScript", "Animation"],
-      github: "https://github.com/Yogesh01010/Birthday-site.git",
-      demo: "https://6861796ffbb8c121341f9dfa--iktara.netlify.app/",
+        "A YouTube clone built with React.js is a web application that mimics the functionality of YouTube. It allows users to upload, share, and watch videos, just like on the original platform",
+      techStack: ["React","Animation"],
+      github: "https://github.com/savagetushar/you-Tube-clone",
+      demo: "https://you-tube-clone-brown.vercel.app/",
       image: birthday,
       gradient: "from-gray-700 to-black",
     },
