@@ -3,10 +3,10 @@ import { Github, ExternalLink, Code } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import birthday from "../assets/birthday.jpg";
 import library from "../assets/library.jpg";
 import nikeStore from "../assets/nike-store.jpg";
-import ecommerce from "../assets/ecommerce.jpg";
+import iimage from "../assets/iimage.png";
+import youtube from "../assets/YouTube.png"
 
 const Projects = () => {
   const projects = [
@@ -39,7 +39,7 @@ const Projects = () => {
       techStack: ["React","Animation"],
       github: "https://github.com/savagetushar/you-Tube-clone",
       demo: "https://you-tube-clone-brown.vercel.app/",
-      image: birthday,
+      image: "youtube",
       gradient: "from-gray-700 to-black",
     },
     {
@@ -53,13 +53,13 @@ const Projects = () => {
       gradient: "from-gray-700 to-black",
     },
     {
-      title: "E-commerce Website",
+      title: "Instagram Clone",
       description:
-        "A full-stack e-commerce platform with user authentication, product management, shopping cart, and secure payment processing.",
-      techStack: ["MongoDB", "Express", "React", "Node.js"],
-      github: "https://github.com/Yogesh01010/ecommerce_v1.git",
-      demo: "https://master--frolicking-quokka-3d5cca.netlify.app/",
-      image: ecommerce,
+        "The Instagram Clone is a social media web application built using React JS that replicates the core features of Instagram.",
+      techStack: ["React", "CSS"],
+      github: "https://github.com/savagetushar/Instagram-Page",
+      demo: "https://instagram-page-dusky.vercel.app/",
+      image: iimage,
       gradient: "from-gray-700 to-black",
     },
   ];
