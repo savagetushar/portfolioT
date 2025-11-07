@@ -6,7 +6,6 @@ const ThemeToggle = () => {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    // Check for saved theme preference or default to light
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
@@ -37,7 +36,7 @@ const ThemeToggle = () => {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       onClick={toggleTheme}
-      className="p-2 rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors"
+      className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors border border-border"
       aria-label="Toggle theme"
     >
       <motion.div
@@ -46,9 +45,9 @@ const ThemeToggle = () => {
         transition={{ duration: 0.3 }}
       >
         {isDark ? (
-          <Sun className="h-5 w-5 text-primary" />
+          <Sun className="h-5 w-5 text-foreground" />
         ) : (
-          <Moon className="h-5 w-5 text-primary" />
+          <Moon className="h-5 w-5 text-foreground" />
         )}
       </motion.div>
     </motion.button>
