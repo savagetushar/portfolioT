@@ -1,54 +1,57 @@
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
-import ThemeToggle from "./ThemeToggle";
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Sun, Moon } from 'lucide-react';
 
-const Navbar = () => {
-  const [open, setOpen] = useState(false);
+const ThemeToggle = () => {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      setIsDark(true);
+      document.documentElement.classList.add('dark');
+    } else {
+      setIsDark(false);
+      document.documentElement.classList.remove('dark');
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = !isDark;
+    setIsDark(newTheme);
+    
+    if (newTheme) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  };
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-background border-b border-border z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-
-        {/* Logo */}
-        <h1 className="text-xl font-bold text-foreground">Tushar</h1>
-
-        {/* Desktop Menu */}
-        <nav className="hidden md:flex gap-6 text-foreground">
-          <a href="#home" className="hover:text-primary transition">Home</a>
-          <a href="#projects" className="hover:text-primary transition">Projects</a>
-          <a href="#contact" className="hover:text-primary transition">Contact</a>
-        </nav>
-
-        {/* Desktop Theme Toggle */}
-        <div className="hidden md:block">
-          <ThemeToggle />
-        </div>
-
-        {/* Hamburger Button */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden p-2 rounded-md hover:bg-muted transition"
-        >
-          {open ? (
-            <X className="h-6 w-6 text-foreground" />
-          ) : (
-            <Menu className="h-6 w-6 text-foreground" />
-          )}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {open && (
-        <div className="md:hidden px-6 py-4 space-y-4 bg-background border-t border-border">
-          <a href="#home" className="block text-foreground hover:text-primary">Home</a>
-          <a href="#projects" className="block text-foreground hover:text-primary">Projects</a>
-          <a href="#contact" className="block text-foreground hover:text-primary">Contact</a>
-
-          <ThemeToggle />
-        </div>
-      )}
-    </header>
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      onClick={toggleTheme}
+      className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors border border-border"
+      aria-label="Toggle theme"
+    >
+      <motion.div
+        initial={false}
+        animate={{ rotate: isDark ? 180 : 0 }}
+        transition={{ duration: 0.3 }}
+      >
+        {isDark ? (
+          <Sun className="h-5 w-5 text-foreground" />
+        ) : (
+          <Moon className="h-5 w-5 text-foreground" />
+        )}
+      </motion.div>
+    </motion.button>
   );
 };
 
-export default Navbar;
+export default ThemeToggle;
