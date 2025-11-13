@@ -15,7 +15,7 @@ const Projects = () => {
       description:
         "A modern food delivery application built with React  featuring real-time ordering, user authentication, and seamless payment integration.",
       techStack: ["React", "JavaScript", "web Development"],
-      github: "https://github.com/savagetushar/Foodiehub",
+      github: "https://github.com/tusharpandey-dev/Foodiehub",
       demo: "https://foodiehub-gules.vercel.app/",
       image:
         "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500&h=300&fit=crop",
@@ -27,7 +27,7 @@ const Projects = () => {
         "A comprehensive library management application with book cataloging, member management, and automated fine calculation systems.",
       techStack: ["HTML", "CSS", "JavaScript", "Web Development"],
       github:
-        "https://github.com/savagetushar/Lms-Frontend",
+        "https://github.com/tusharpandey-dev/Lms-Frontend",
       demo: "https://lms-frontend-snowy.vercel.app/",
       image: library,
       gradient: "from-gray-700 to-black",
@@ -37,7 +37,7 @@ const Projects = () => {
       description:
         "A YouTube clone built with React.js is a web application that mimics the functionality of YouTube. It allows users to upload, share, and watch videos, just like on the original platform",
       techStack: ["React","Animation"],
-      github: "https://github.com/savagetushar/you-Tube-clone",
+      github: "https://github.com/tusharpandey-dev/you-Tube-clone",
       demo: "https://you-tube-clone-brown.vercel.app/",
       image: image,
       gradient: "from-gray-700 to-black",
@@ -57,7 +57,7 @@ const Projects = () => {
       description:
         "The Instagram Clone is a social media web application built using React JS that replicates the core features of Instagram.",
       techStack: ["React", "CSS"],
-      github: "https://github.com/savagetushar/Instagram-Page",
+      github: "https://github.com/tusharpandey-dev/Instagram-Page",
       demo: "https://instagram-page-dusky.vercel.app/",
       image: iimage,
       gradient: "from-gray-700 to-black",

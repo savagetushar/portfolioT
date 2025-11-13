@@ -13,7 +13,7 @@ import profileImage from "../assets/profile.png";
 
 const Hero = () => {
   const socialLinks = [
-    { icon: Github, href: "https://github.com/savagetushar", label: "GitHub" },
+    { icon: Github, href: "https://github.com/tusharpandey-dev", label: "GitHub" },
     {
       icon: Linkedin,
       href: "https://www.linkedin.com/in/tushar-pandey-3b0251208/",
