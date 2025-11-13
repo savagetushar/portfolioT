@@ -5,7 +5,7 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: Github,
-      href: "https://github.com/savagetushar",
+      href: "https://github.com/tusharpandey-dev",
       label: "GitHub",
       color: "hover:text-gray-400",
     },
