@@ -7,6 +7,7 @@ import library from "../assets/library.jpg";
 import nikeStore from "../assets/nike-store.jpg";
 import iimage from "../assets/iimage.png";
 import image from "../assets/image.png"
+import iiimage from "../assets/iiimage.png"
 
 const Projects = () => {
   const projects = [
@@ -60,6 +61,16 @@ const Projects = () => {
       github: "https://github.com/tusharpandey-dev/Instagram-Page",
       demo: "https://instagram-page-dusky.vercel.app/",
       image: iimage,
+      gradient: "from-gray-700 to-black",
+    },
+    {
+    title: "PathGuard",
+      description:
+        "PathGuard is a secure, real-time workspace management web application built with React and powered by Firebase Realtime Database. It provides authenticated users with a private digital vault to manage projects, notes, and profile data across multiple routes with seamless real-time synchronization.",
+      techStack: ["React", "CSS","Firebase"],
+      github: "https://github.com/tusharpandey-dev/pathguard",
+      demo: "https://pathguard-gamma.vercel.app/",
+      image: iiimage,
       gradient: "from-gray-700 to-black",
     },
   ];
